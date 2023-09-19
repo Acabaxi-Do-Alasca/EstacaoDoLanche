@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Estação do Lanche</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <style>
+        .amarelo{
+            background-color: #FFD704;
+        }
+        .vinho{
+            background-image: url(images/AdobeStock_244611927.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .vermelho{
+            background-color: #FF0000;
+        }
+        .cinza{
+            background-color: #F4F4F8;
+        }
+        .amareloC{
+            background-color: lightyellow;
+        }
+        .cinzaE{
+            background-color: #D9D9D9;
+        }
+        .verde{
+            background-color: #00FF1A;
+        }
+        .branco{
+            background-color: #FFFFFF;
+        }
+
+        header{
+            position:fixed;
+            width: 100vw;
+            top: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .margin-direita-branco{
+            border-right: 0.39vw solid #FFFFFF;
+        }
+        .margin-direita-amarelo{
+            border-right: 0.65vw solid #FFD704;
+        }
+        .margin-direita-vermelho{
+            border-right: 0.84vw solid #FF0000;
+        }
+        .margin-direita-vermelho2{
+            border-right: 0.39vw solid #FF0000;
+        }
+        .noBorder{
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .alinhado-esquerda{
+            align-items:flex-start !important;
+        }
+
+        #cabeca1{
+            height: 8.43vh;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+        }
+        #cabeca2{
+            height: 68vh;
+            background-color: #00000061;
+            margin-top: 8.43vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #cabeca3{
+            height: 60vh;
+        }
+        .cabecaV{
+            margin:6.69vh -0.1px;
+            border: 0.39vw solid #FFD704;
+            border-radius: 10px;
+        }
+        
+        .corpoV{
+            display: flex;
+            flex-direction: column;
+            height: 40vh;
+            margin:6.69vh -0.1px;
+            border: 0.39vw;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .corpoV2{
+            height: 70.14vh;
+            margin:10.70vh -0.1px;
+        }
+        .corpoVD{
+            height: 50vh;
+            margin: 5.48vh 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .imagem2{
+            width: 31.017301559448242px;
+            height: 30.635251998901367px;
+            top: 2.175537109375px;
+            left: -0.0052490234375px;
+
+            
+        }
+
+        .corpo-cinzaE{
+            height: 27vh;
+            margin-top: 5.48vh;
+            border-bottom: 0.8vh solid #FF0000
+        }
+        .corpo-cinzaE2{
+            height: 23vh;
+            margin-bottom: 5.48vh;
+        }
+        
+
+        .rodapeB{
+            height: 9.63vh;
+            margin:2.81vh -0.1px;
+        }
+
+        #nome{
+            color: #392828;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            margin-top: 10px;
+        }
+        #logo{
+            height: 33px;
+            width: 36px;
+        }
+        #cabeca12{
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            margin-left: 8.26vw;
+            width: 238px;
+            text-decoration: none;
+        }
+        #cabeca13{
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            margin-right: 8.26vw;
+            width: 478px;
+        }
+        #cabeca13 a{
+            display: flex;
+            width: 54px;
+            height: 28px;
+            flex-direction: row;
+            justify-content: center;
+            color: #000;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300&display=swap');
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.28px;
+        }
+        #cabeca13 p{
+            color: #FFF;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            white-space: nowrap
+        }
+        #botao-verde{
+            display: flex;
+            padding: 5px 80px 8px 80px;
+            justify-content: center;
+            gap: 12px;
+            border-radius: 20px;
+            background-color: #0BD42B;
+        }
+        #botao-verde img{
+            margin-top: 1px;
+        }
+        #texto-maior{
+            color: #FFF;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-top: 62px;
+        }
+        #texto-menor{
+            color: #FFF;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 1.3px;
+        }
+        #botao-vermelho{
+            display: flex;
+            width: 260px;
+            height: 41px;
+            padding: 13px 33px 12px 32px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 18px;
+            background: #DE0A0A;
+            margin-top: 20px;
+            color: #FFF;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        #hamburguer{
+            background-image: url(images/AdobeStock_334881645.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        #combos{
+            background-image: url(images/AdobeStock_577168329.jpeg);
+            background-size: cover;
+        }
+        #cabeca3 h2{
+            color: var(--Branco, #FFF);
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-align: left;
+            margin-top: 90px;
+        }
+        #cabeca3 p{
+            color: var(--Branco, #FFF);
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 1.04px;
+        }
+        #combos h2, #combos p{
+            text-align: right !important;
+        }
+        #Smash-burguer-fenomenal{
+            background-image: url(images/AdobeStock_593086323.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        #Extremo-picante-burguer{
+            background-image: url(images/AdobeStock_244611927.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        #Combo-Picles{
+            background-image: url(images/AdobeStock_593086306.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .botao-vermelho{
+            display: inline-flex;
+            padding: 8px 25px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background: #DE0A0A;
+        }
+        .texto-amarelo{
+            color: #FFD704;
+            text-align: center;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@900&display=swap');
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .corpoV h3{
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            color: #DE0A0A;
+            margin-bottom: 5vh;
+        }
+        .preco{
+            color: #000;
+            font-family: url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto:wght@300;900&display=swap');
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28.2px; /* 117.5% */
+            letter-spacing: 1.92px;
+            margin-top: 9vh;
+        }
+        #map{
+            display: flex;
+            justify-content: center;
+        }
+        .img1{
+            background-image: url(images/AdobeStock_319713812.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .img2{
+            background-image: url(images/AdobeStock_319713641.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .img3{
+            background-image: url(images/AdobeStock_111479179.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .img4{
+            background-image: url(images/AdobeStock_583968036.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .img5{
+            background-image: url(images/AdobeStock_265809361.jpeg);
+            background-size: cover;
+            background-position: center center; }
+        
+        .custom-input input,
+        .custom-textarea textarea {
+            width: 420px;
+            height: 38px;
+            border: 1px solid #000; /* Adicione a cor desejada aqui */
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .custom-textarea textarea {
+            height: 91px;
+        }
+
+        .custom-button {
+            width: 95px;
+            height: 40px;
+            top: 8px;
+            left: 46px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 29.05px;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFD704; /* Cor de fundo desejada */
+            border: none;
+            border-radius: 10px;
+            color: #000; /* Cor do texto desejada */
+            cursor: pointer;
+        }
+
+        .custom-button:hover {
+            background-color: #000; /* Cor de fundo ao passar o mouse */
+            color: #FFD704; /* Cor do texto ao passar o mouse */
+        }
+
+        .texto-c {
+            text-align: center;
+            color: #FFD704;
+            Width: 292px;
+            Height: 150px;
+            Line-height:75px;
+            font-family: Roboto;
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 75px;
+            letter-spacing: 0.235em;
+            font-weight: 700;
+            line-height: 75px;
+            letter-spacing: 0em;
+        }
+
+        .branco2{
+            font-family: Roboto;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white;
+        }
+
+        .fim{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fim2 {
+            width: 186px;
+            height: 24px;
+            top: 44px;
+            left: 178px;
+            font-family: Inter;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+
+
+        }
+
+        .imagem3 {
+            width: 36px;
+            height: 32px;
+            top: 39px;
+            left: 125px;
+            border: 2px;
+        }
+
+        .num{
+            top: 37px;
+            left: 880px;
+            font-family: Inter;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;
+            letter-spacing: 0em;
+            text-align: right;
+        }
+
+        .end{
+            top: 60px;
+            left: 880px;
+            font-family: Inter;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;  
+            letter-spacing: 0em;
+            text-align: right;
+        }
+
+
+        .rodape2{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: end;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="row noBorder">
+            <div id="cabeca1" class="col-sm-12 amarelo">
+                <a href="#cabeca2" id="cabeca12">
+                    <img src="images/burger-solid.svg" alt="Logo de hambúrguer" id="logo">
+                    <h1 id="nome">Estação do Lanche</h1>
+                </a>
+                <div id="cabeca13">
+                    <a href="#cabeca2">Início</a>
+                    <a href="#cabeca3">Produtos</a>
+                    <a href="#contate-nos">Contato</a>
+                    <a href="https://api.whatsapp.com/send?phone=5555189967158&text=Ola,%20voce%20se%20fudeu" id="botao-verde">
+                        <img src="images/whatsapp.svg" alt="Whatsapp">
+                        <p>Faça seu Pedido</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="col-sm-12 vinho">
+            <div id="cabeca2">
+                <p id="texto-maior">Uma delícia de sabor</p>
+                <p id="texto-menor">Para os clientes mais exigentes.</p>
+                <a href="#cabeca3" id="botao-vermelho">VER MAIS<strong>‎ PRODUTOS</strong></a>
+            </div>
+        </div>
+        <div id="cabeca3" class="row amarelo noBorder">
+            <div id="hamburguer" class="col-sm-6 vermelho cabecaV">
+                <h2>Hambúrguer</h2>
+                <p>do tamanho da sua fome</p>
+            </div>
+            <div id="combos" class="col-sm-6 vermelho cabecaV">
+                <h2>Combos</h2>
+                <p>para toda fámilia</p>
+            </div>
+        </div>
+        <div class="row noBorder cinza">
+            <div id="Smash-burguer-fenomenal" class="col-sm-4 vermelho corpoV"></div>
+            <div class="col-sm-5 corpoV alinhado-esquerda">
+                <h3>Smash burguer fenomenal </h3>
+                <p>Pão de gergilin, hamburguer 180g e muito queijo cheddar.</p>
+                <p class="preco">R$ 18,90</p>
+            </div>
+            <div class="col-sm-3 corpoV"><a href="https://api.whatsapp.com/send?phone=5555189912345" class="botao-vermelho texto-amarelo">EU QUERO!</a></div>
+        </div>
+        <div class="row noBorder amareloC">
+            <div id="Extremo-picante-burguer" class="col-sm-4 vermelho corpoV"></div>
+            <div class="col-sm-5 corpoV alinhado-esquerda">
+                <h3>Extremo picante burguer</h3>
+                <p>Pão de gergilin, hamburguer 180g e muito queijo cheddar, salada e molho especial de pimenta.</p>
+                <p class="preco">R$ 24,90</p>
+            </div>
+            <div class="col-sm-3 corpoV"><a href="https://api.whatsapp.com/send?phone=5555189967158&text=Ola,%20voce%20se%20fudeu" class="botao-vermelho texto-amarelo">EU QUERO!</a></div>
+        </div>
+        <div class="row noBorder cinza">
+            <div id="Combo-Picles" class="col-sm-4 vermelho corpoV"></div>
+            <div class="col-sm-5 corpoV alinhado-esquerda">
+                <h3>Combo Picles</h3>
+                <p>Pão de gergilin, hamburguer 180g e salada com picles. Acompanha Batata de 250g e Refrigerante de 350ml</p>
+                <p class="preco">R$ 39,90</p>
+            </div>
+            <div class="col-sm-3 corpoV"><a href="https://api.whatsapp.com/send?phone=5555189967158&text=Ola,%20voce%20se%20fudeu" class="botao-vermelho texto-amarelo">EU QUERO!</a></div>
+        </div>
+        <div id="contate-nos" class="row noBorder branco">
+            <div id="map" class="col-sm-5 corpoV2 margin-direita-branco"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.878366159967!2d-50.09494392476584!3d-21.41173808615575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9496039e1400960d%3A0x118df3bc4af39f10!2sSESI%20PEN%C3%81POLIS!5e1!3m2!1spt-BR!2sbr!4v1694531571790!5m2!1spt-BR!2sbr" width="400" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="col-sm-7 corpoV2">
+                <h2 style="color: #DE0A0A; font-weight: bold;">FALE CONOSCO</h2>
+                <form>
+                    <div class="form-group custom-input">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu Nome">
+                    </div>
+                    <div class="form-group custom-input">
+                        <label for="telefone">Telefone para Contato:</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="Seu Telefone">
+                    </div>                    
+                    <div class="form-group custom-textarea">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" rows="4" placeholder="Sua Mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="btn custom-button">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+        <div class="row noBorder vermelho">
+            <div class="col-sm-5 corpoVD margin-direita-vermelho">
+                <p class="texto-c"><strong>SEGUE A GENTE</strong></p>
+                <p class="branco2"><img src="images/instagram.svg" alt="" class="imagem2" >estacaolanche</p>
+                <p class="branco2"><img src="images/youtube.svg" alt="" class="imagem2">estacaolanchetv</p>
+                <p class="branco2"><img src="images/tiktok.svg" alt="" class="imagem2">estacaolanche</p>
+            </div>
+            <div class="col-sm-7 noBorder">
+                <div class="row noBorder">
+                    <div class="col-sm-6 cinzaE corpo-cinzaE margin-direita-vermelho img1"></div>
+                    <div class="col-sm-6 cinzaE corpo-cinzaE img2"></div>
+                    <div class="col-sm-4 cinzaE corpo-cinzaE2 margin-direita-vermelho2 img3"></div>
+                    <div class="col-sm-4 cinzaE corpo-cinzaE2 margin-direita-vermelho2 img4"></div>
+                    <div class="col-sm-4 cinzaE corpo-cinzaE2 img5"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="row noBorder amarelo">
+            <div class="col-sm-5 fim rodapeB margin-direita-amarelo">
+                <figure class="imagem3"> <img src="images/burger-solid.svg" alt=""> </figure>
+                <p class="fim2">Estação do Lanche</p>
+            </div>
+            <div class="col-sm-7 rodape2 rodapeB">
+                <p class="num">(18) 99123-1234 / (18) 3636-3636</p>
+                <p class="end">Rua Lorem Ipsum Nº 123, Centro - Birigui / SP</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

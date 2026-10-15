@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação do Lanche | Hambúrgueres e combos em Birigui/SP</title>
+    <meta name="description" content="Estação do Lanche: smash burgers, hambúrgueres artesanais e combos para toda a família. Peça pelo WhatsApp.">
+    <meta name="theme-color" content="#FFD704">
+
+    <!-- Pré-visualização ao compartilhar (WhatsApp, Instagram, Facebook).
+         TODO: depois de publicar o site, troque og:image e adicione og:url com o endereço completo (https://...) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Estação do Lanche">
+    <meta property="og:title" content="Estação do Lanche | Uma delícia de sabor">
+    <meta property="og:description" content="Smash burgers, hambúrgueres e combos para toda a família. Peça pelo WhatsApp.">
+    <meta property="og:image" content="../images/AdobeStock_593086323.webp">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" as="image" href="../images/AdobeStock_244611927.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FastFoodRestaurant",
+        "name": "Estação do Lanche",
+        "description": "Smash burgers, hambúrgueres e combos para toda a família.",
+        "servesCuisine": "Hambúrguer",
+        "telephone": "+5518997692145",
+        "image": "../images/AdobeStock_593086323.webp"
+    }
+    </script>
+</head>
+<body>
+    <a class="visually-hidden-focusable" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <img src="../images/burger-solid.svg" alt="" width="36" height="33">
+                <span class="nome">Estação do Lanche</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav align-items-md-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item ms-md-2 pb-2 pb-md-0">
+                        <a class="botao-pedido" href="https://api.whatsapp.com/send?phone=5518997692145&text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20pedido">
+                            <img src="../images/whatsapp.svg" alt="" width="20" height="20">
+                            Faça seu Pedido
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section id="inicio" class="hero">
+            <h2>Uma delícia de sabor</h2>
+            <p>Para os clientes mais exigentes.</p>
+            <a href="#produtos" class="botao-hero">Ver mais <strong>produtos</strong></a>
+        </section>
+
+        <section id="produtos" class="categorias">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="categoria categoria-hamburguer">
+                            <h2>Hambúrguer</h2>
+                            <p>do tamanho da sua fome</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="categoria categoria-combos">
+                            <h2>Combos</h2>
+                            <p>para toda a família</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <article class="produto produto-a">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-md-4">
+                        <img class="produto-foto" src="../images/AdobeStock_593086323.webp" alt="Smash burger com muito queijo cheddar" width="1920" height="1280" loading="lazy">
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Smash burger fenomenal</h3>
+                        <p>Pão de gergelim, hambúrguer 180g e muito queijo cheddar.</p>
+                        <p class="preco">R$ 18,90</p>
+                    </div>
+                    <div class="col-md-3 text-md-center">
+                        <a href="https://api.whatsapp.com/send?phone=5518997692145&text=Ol%C3%A1!%20Quero%20pedir%20o%20Smash%20Burger%20Fenomenal" class="botao-quero">EU QUERO!</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="produto produto-b">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-md-4">
+                        <img class="produto-foto" src="../images/AdobeStock_244611927.webp" alt="Hambúrguer extremo picante com molho de pimenta" width="1920" height="1280" loading="lazy">
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Extremo picante burger</h3>
+                        <p>Pão de gergelim, hambúrguer 180g e muito queijo cheddar, salada e molho especial de pimenta.</p>
+                        <p class="preco">R$ 24,90</p>
+                    </div>
+                    <div class="col-md-3 text-md-center">
+                        <a href="https://api.whatsapp.com/send?phone=5518997692145&text=Ol%C3%A1!%20Quero%20pedir%20o%20Extremo%20Picante%20Burger" class="botao-quero">EU QUERO!</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="produto produto-a">
+            <div class="container">
+                <div class="row align-items-center gy-3">
+                    <div class="col-md-4">
+                        <img class="produto-foto" src="../images/AdobeStock_593086306.webp" alt="Combo Picles com hambúrguer, batata e refrigerante" width="1920" height="1280" loading="lazy">
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Combo Picles</h3>
+                        <p>Pão de gergelim, hambúrguer 180g e salada com picles. Acompanha batata de 250g e refrigerante de 350ml.</p>
+                        <p class="preco">R$ 39,90</p>
+                    </div>
+                    <div class="col-md-3 text-md-center">
+                        <a href="https://api.whatsapp.com/send?phone=5518997692145&text=Ol%C3%A1!%20Quero%20pedir%20o%20Combo%20Picles" class="botao-quero">EU QUERO!</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <section id="contato" class="contato">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-5">
+                        <!-- TODO: o mapa ainda aponta para o SESI Penápolis; trocar pelo endereço real da loja -->
+                        <iframe class="mapa" title="Mapa com a localização da Estação do Lanche" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.878366159967!2d-50.09494392476584!3d-21.41173808615575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9496039e1400960d%3A0x118df3bc4af39f10!2sSESI%20PEN%C3%81POLIS!5e1!3m2!1spt-BR!2sbr!4v1694531571790!5m2!1spt-BR!2sbr" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-md-7">
+                        <h2>FALE CONOSCO</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome-cliente" class="form-label">Nome:</label>
+                                <input type="text" class="form-control" id="nome-cliente" name="nome" placeholder="Seu nome" autocomplete="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label">Telefone para contato:</label>
+                                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone" autocomplete="tel">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem:</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="botao-enviar">ENVIAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <div class="col-md-5 col-conteudo px-4">
+                        <h2 class="social-titulo">SEGUE A GENTE</h2>
+                        <p class="social-item"><img src="../images/instagram.svg" alt="" width="31" height="31">estacaolanche</p>
+                        <p class="social-item"><img src="../images/youtube.svg" alt="" width="31" height="31">estacaolanchetv</p>
+                        <p class="social-item"><img src="../images/tiktok.svg" alt="" width="31" height="31">estacaolanche</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="galeria">
+                            <div role="img" aria-label="Hambúrguer artesanal" style="background-image:url(../images/AdobeStock_319713812.webp)"></div>
+                            <div role="img" aria-label="Lanche com batatas fritas" style="background-image:url(../images/AdobeStock_319713641.webp)"></div>
+                            <div role="img" aria-label="Hambúrguer com queijo" style="background-image:url(../images/AdobeStock_111479179.webp)"></div>
+                            <div role="img" aria-label="Combo de hambúrguer" style="background-image:url(../images/AdobeStock_583968036.webp)"></div>
+                            <div role="img" aria-label="Hambúrguer suculento" style="background-image:url(../images/AdobeStock_265809361.webp)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-5 marca">
+                    <img src="../images/burger-solid.svg" alt="" width="36" height="32">
+                    <span>Estação do Lanche</span>
+                </div>
+                <!-- TODO: trocar telefones e endereço pelos dados reais -->
+                <div class="col-md-7 contato-rodape">
+                    <p>(18) 99123-1234 / (18) 3636-3636</p>
+                    <p>Rua Lorem Ipsum Nº 123, Centro - Birigui / SP</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

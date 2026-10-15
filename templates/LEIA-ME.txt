@@ -1,0 +1,3 @@
+Copie ../modelo-pagina.html para um novo arquivo na RAIZ do site, ex.: promocoes.html.
+Depois, atualize titulo, introducao, secoes, links e adicione a nova pagina ao menu e rodape compartilhados.
+Neste projeto estatico, o cabecalho e rodape foram duplicados em cada HTML para funcionar sem build. Para crescimento real, use includes/templates de um framework.

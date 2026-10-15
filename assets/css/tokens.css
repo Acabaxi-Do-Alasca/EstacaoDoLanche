@@ -1,0 +1,31 @@
+/* 01 - Design tokens. Edite aqui para alterar a identidade do site todo. */
+:root {
+  color-scheme: light;
+  --color-ink: #241b16;
+  --color-ink-soft: #52463d;
+  --color-ink-muted: #77695e;
+  --color-canvas: #fffaf3;
+  --color-surface: #ffffff;
+  --color-surface-warm: #f9f0e4;
+  --color-line: #eadfd1;
+  --color-yellow: #f5be43;
+  --color-yellow-deep: #e6a82c;
+  --color-red: #cb4736;
+  --color-red-hover: #ad372b;
+  --color-green: #24834e;
+  --color-dark: #241a15;
+  --color-dark-raised: #33251e;
+  --color-white: #ffffff;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --container: 1160px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
+  --shadow-sm: 0 8px 25px rgba(43, 27, 15, .055);
+  --shadow-md: 0 18px 52px rgba(43, 27, 15, .09);
+  --shadow-raise: 0 22px 55px rgba(43, 27, 15, .14);
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --section-space: clamp(60px, 7vw, 108px);
+}
